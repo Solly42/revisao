@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="">n1</label>
+        <input type="number" id="n1">
+        <label for="">n2</label>
+        <input type="number" id="n2">
+        <button id="botao">Soma</button>
+        <button id="botao2">Subtrai</button>
+        <button id="botao3">Multiplica</button>
+        <button id="botao4">Divide</button>
+
+    </form>
+
+    <script>
+        document.getElementById("botao").addEventListener("click", somar)
+
+        function somar () {
+            var n1 = parseInt(document.getElementById("n1").value);
+
+            var n2 = parseInt(document.getElementById("n2").value);
+
+            var resultado = n1 + n2;
+            alert (resultado)
+        }
+
+        document.getElementById("botao2").addEventListener("click", subtrair)
+
+        function subtrair () {
+            var n1 = parseInt(document.getElementById("n1").value);
+
+            var n2 = parseInt(document.getElementById("n2").value);
+
+            var resultado = n1 - n2;
+            alert (resultado)
+        }
+
+        document.getElementById("botao3").addEventListener("click", multiplicar)
+
+        function multiplicar () {
+            var n1 = parseInt(document.getElementById("n1").value);
+
+            var n2 = parseInt(document.getElementById("n2").value);
+
+            var resultado = n1 * n2;
+            alert (resultado)
+        }
+
+        document.getElementById("botao4").addEventListener("click", dividir)
+
+        function dividir () {
+
+            if( n1 > 0 && n2 > 0) {
+            var n1 = parseInt(document.getElementById("n1").value);
+
+            var n2 = parseInt(document.getElementById("n2").value);
+
+            var resultado = n1 / n2;
+            alert (resultado)
+            }
+            else {
+                alert("Não divisivel por 0");
+            }
+        }
+    </script>
+    
+</body>
+</html>
